@@ -10,6 +10,11 @@ const WeatherContextProvider = ({children}) => {
     
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=Metric&appid=11a9f7f715a24513ea614a13dabe421f`;
     
+    
+        const goBack = () => {
+          window.history.back();
+        };
+
     const fetchData = async () => {
         try {
             const response = await fetch(url);
@@ -26,7 +31,7 @@ const WeatherContextProvider = ({children}) => {
     };
 
       return (
-        <WeatherContext.Provider value={ {weatherData, setWeatherData, fetchData, cityName, setCityName, userCities, setUserCities} }>
+        <WeatherContext.Provider value={ {weatherData, setWeatherData, fetchData, cityName, setCityName, userCities, setUserCities,goBack } }>
             {children}
         </WeatherContext.Provider>
       )

@@ -4,8 +4,11 @@ import { useContext, useState, useEffect } from "react";
 
 function Location() {
     const { city } = useParams();
-    const { userCities, weatherData } = useContext(WeatherContext);
+    const { userCities,goBack } = useContext(WeatherContext);
     const [location, setLocation] = useState(null);
+
+
+    
 
 
 
@@ -32,8 +35,7 @@ function Location() {
           <p>Wind Speed: {location.wind.speed}</p>
           <p>Humidity: {location.main.humidity}</p>
 
-          {/* <p>{location.temperature}</p> */}
-          {/* Render other properties from the location object */}
+          <button onClick={goBack} >Back</button>
           
            
         </div>
