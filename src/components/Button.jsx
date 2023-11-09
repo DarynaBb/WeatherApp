@@ -1,19 +1,12 @@
-import React, { useContext } from 'react';
-import { WeatherContext } from '../context/WeatherContext';
+import React from "react";
 
-function Button({type, text}) {
-
-    const { fetchData, setCityName } = useContext(WeatherContext);
-
-    const onClickhandler = (event) => {
-        event.preventDefault();
-        fetchData();
-        setCityName("");
-       } 
+function Button({ type, text, onClick, disabled }) {
 
   return (
-    <button type={type} onClick={onClickhandler}>{text}</button>
-  )
+    <button type={type} onClick={onClick} disabled={disabled} >
+      {text}
+    </button>
+  );
 }
 
-export default Button
+export default Button;
