@@ -5,6 +5,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import { Pagination } from 'swiper/modules';
+import { NotFoundPage } from "./NotFoundPage";
 
 
 function Location() {
@@ -48,7 +49,8 @@ function Location() {
                             <button onClick={goBack} >Back</button>
                         </div>
                             ) : (
-                        <div>Location not found</div>
+                      
+                        <NotFoundPage/>
                     )}
                 </SwiperSlide>
                 {restCities.map((city) => (
