@@ -39,7 +39,7 @@ const WeatherContextProvider = ({ children }) => {
         setCityName,
         userCities,
         setUserCities,
-        goBack,
+        goBack
       }}
     >
       {children}
