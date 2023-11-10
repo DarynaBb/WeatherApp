@@ -8,3 +8,10 @@ border-radius: 8px;
 border-radius: 8px;
 }
 
+.hidden {
+  display: none;
+}
+
+.block {
+  display: block;
+}
