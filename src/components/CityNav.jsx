@@ -19,10 +19,11 @@ function CityNav() {
 
   return (
     <ul className={`${onFocus ? "opacity-40" : "opacity-100"} flex flex-col items-center gap-[10px] mt-[40px]`}>
-        {userCities.map((city) => (
-          <div className={`${edit ? "flex flex-row items-center gap-[20px]" : "border-[2px] w-[60%] flex flex-col items-center"}  `}  key={city.id}>
+        {userCities.map((city, index) => (
+          <div className={`${edit ? "flex flex-row items-center gap-[20px]" : "w-full flex flex-col items-center"} bg-${index} text-black `}  key={city.id}>
             <Link to={`/${city.name}`}>
-              <p>{city.name}</p>
+              {console.log(index)}
+              <p className='text-[24px]'>{city.name}</p>
               <p>{`${degree === "celsius" ? Math.floor(city.main.temp) : Math.floor(city.main.temp)*9/5+32}` }</p>
               <p>{city.weather[0].description}</p>
             </Link>

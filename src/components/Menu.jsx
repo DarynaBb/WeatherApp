@@ -25,8 +25,8 @@ function Menu() {
 
 
   return (
-    <div>
-        <div className='flex justify-end relative'>
+    <div className='text-black'>
+        <div className='flex justify-end relative '>
             <button onClick={onCklickHandler}>
                 <img src={menu} alt="" />
             </button>

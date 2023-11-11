@@ -4,9 +4,10 @@ const FormContext = createContext();
 
 const FormContextProvider = ({ children }) => {
     const [onFocus, setOnFocus] = useState(false);
+    const [isCityFound, setIsCityFound] = useState(false);
 
     return (
-        <FormContext.Provider value={ {onFocus, setOnFocus} }>
+        <FormContext.Provider value={ {onFocus, setOnFocus, isCityFound, setIsCityFound } }>
             {children}
         </FormContext.Provider>
     );

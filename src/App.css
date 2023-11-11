@@ -68,4 +68,32 @@ body {
   object-fit: cover;
 }
 
+.bg-0 {
+  background-color: #FFC6C6;
+}
+
+.bg-1 {
+  background-color: #FFE7CA;
+}
+
+.bg-2 {
+  background-color: #F6FFD0;
+}
+
+.bg-3 {
+  background-color: #D3FFD0;
+}
+
+.bg-4 {
+  background-color: #D0F9FF;
+}
+
+.bg-5 {
+  background-color: #D0E6FF;
+}
+
+.bg-6 {
+  background-color: #DFD0FF;
+}
+
 

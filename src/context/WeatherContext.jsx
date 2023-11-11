@@ -6,6 +6,8 @@ const WeatherContextProvider = ({ children }) => {
   const [weatherData, setWeatherData] = useState({});
   const [cityName, setCityName] = useState("");
   const [userCities, setUserCities] = useState(JSON.parse(localStorage.getItem("citiesArray")) || []);
+  const [isCityAdded, setIsCityAdded] = useState(false);
+
   const APIkey = "11a9f7f715a24513ea614a13dabe421f";
 
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=Metric&appid=${APIkey}`;
