@@ -7,10 +7,8 @@ export default {
   theme: {
     extend: {
       colors: {
-        btn: {
           green: '#ECFF12',
-          text: '#464646',
-        },
+          "text-gray": '#464646',
       }
     },
   plugins: [],

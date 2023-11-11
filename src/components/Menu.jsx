@@ -1,9 +1,10 @@
 import React from 'react'
 import { useState, useContext } from 'react'
 import { MenuContext } from '../context/MenuContext';
+import menu from "../assets/images/Menu.svg";
 
 function Menu() {
-   const  { degree, setDegree, setEdit, edit } = useContext(MenuContext);
+   const { degree, setDegree, setEdit, edit } = useContext(MenuContext);
    const [isMenuOpen, setIsMenuOpen] = useState(false); 
 
    const onCklickHandler = () => {
@@ -25,8 +26,10 @@ function Menu() {
 
   return (
     <div>
-        <div className='flex justify-end m-[20px] relative'>
-            <button onClick={onCklickHandler}>Menu</button>
+        <div className='flex justify-end relative'>
+            <button onClick={onCklickHandler}>
+                <img src={menu} alt="" />
+            </button>
         </div>    
         <div className={`${isMenuOpen ? "block" : "hidden" } absolute top-[80px] right-[30px] bg-white p-[40px] rounded-[8px]`}>
             <ul>
