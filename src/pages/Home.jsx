@@ -3,7 +3,7 @@ import Button from "../components/Button"
 
 function Home() {
   return (
-    <section className='bg-black h-full'>
+    <section className='bg-black h-screen'>
         <div className='max-container padding-container flexCenter flex-col mb-[40px]'>
             <div>
                 <img src={image} alt="weather emojis" />
