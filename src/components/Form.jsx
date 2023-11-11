@@ -1,23 +1,18 @@
 import { useContext, useState } from "react";
 import { WeatherContext } from "../context/WeatherContext";
-import Button from "./Button";
 import search from "../assets/images/Search.svg"
+import { FormContext } from "../context/FormContext";
 
 function Form() {
   const { cityName, setCityName, fetchData } = useContext(WeatherContext);
-  const [onFocus, setOnFocus] = useState(false);
+  const {onFocus, setOnFocus} = useContext(FormContext);
+  
 
   const onClickhandlerSearch = (event) => {
     event.preventDefault();
     fetchData();
     setCityName("");
   };
-
-  const onFocusHandler = () => {
-    onFocus ? setOnFocus(false) : setOnFocus(true);
-  }
-
-
 
   return (
     <form action="" className="">
