@@ -18,7 +18,7 @@ function Dashboard() {
 
   console.log(userCities);
   return (
-    <section className=" bg-black text-white h-screen">
+    <section className=" bg-black text-white ">
       <div className="max-container padding-container">
         <TopNav text="LOCATION" />
         <Form />
