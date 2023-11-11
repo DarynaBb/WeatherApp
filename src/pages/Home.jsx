@@ -8,8 +8,12 @@ function Home() {
             <div>
                 <img src={image} alt="weather emojis" />
             </div>
-            <div className="mt-[40px] mb-[24px]">
-                <h1 className="text-white text-[80px]">SHOW ME THE WEATHER</h1>
+            <div className="mt-[40px] mb-[24px] text-center">
+                <h1 className="text-white text-[80px]">
+                    SHOW ME<br />
+                    THE<br /> 
+                    WEATHER
+                </h1>
             </div>
             <Button text="START" link="/dashboard"/>
         </div>
