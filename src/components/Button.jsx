@@ -1,10 +1,11 @@
-import React from "react";
+import { Link } from "react-router-dom";
 
-function Button({ type, text, onClick, disabled }) {
+function Button({ type, text, onClick, disabled, link }) {
 
   return (
-    <button type={type} onClick={onClick} disabled={disabled} >
-      {text}
+    <button type={type} onClick={onClick} disabled={disabled} className="bg-btn-green text-btn-text text-[14px] w-[56px] h-[56px] rounded-full" >
+      
+     <Link to={link}>{text}</Link> 
     </button>
   );
 }

@@ -5,6 +5,7 @@ import Location from '../pages/Location';
 import { NotFoundPage } from '../pages/NotFoundPage';
 
 import Dashboard from '../pages/Dashboard';
+import Home from '../pages/Home';
 
 
 
@@ -14,6 +15,10 @@ export const router = createBrowserRouter([
         children: [
             {
                 path: "/",
+                element: <Home />
+            },
+            {
+                path: "/dashboard",
                 element: <Dashboard />
             },
             {
