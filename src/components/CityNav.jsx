@@ -37,8 +37,8 @@ function CityNav() {
                   </div>
                 </div>
                 <div className='text-right'>
-                  <p className='text-[24px]'>{`${degree === "celsius" ? Math.floor(city.main.temp) + "°C" : Math.floor(city.main.temp) * 9 / 5 + 32 + "°F"}`}</p>
-                  <p className='text-[14px]'>FEELS: {`${degree === "celsius" ? Math.floor(city.main.feels_like) + "°C" : Math.floor(city.main.feels_like) * 9 / 5 + 32 + "°F"}`}</p>
+                  <p className='text-[24px]'>{`${degree === "celsius" ? Math.floor(city.main.temp) + "°C" : Math.floor((city.main.temp) * 9 / 5 + 32) + "°F"}`}</p>
+                  <p className='text-[14px]'>FEELS: {`${degree === "celsius" ? Math.floor(city.main.feels_like) + "°C" : Math.floor((city.main.feels_like) * 9 / 5 + 32) + "°F"}`}</p>
                 </div>
               </div>
             </Link>

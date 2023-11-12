@@ -57,13 +57,13 @@ function MainCityData() {
             <div className="text-[12px] relative flex flex-col items-center w-[350px]">
                 <div className="relative"> 
                     <img src={weatherVisualization.get(location.weather[0].main).iconLocation} alt="icon" width={200} height={200} />
-                    <p className="text-[130px]">{`${degree === "celsius" ? Math.floor(location.main.temp) : Math.floor(location.main.temp) * 9 / 5 + 32 }`}
+                    <p className="text-[130px]">{`${degree === "celsius" ? Math.floor(location.main.temp) : Math.floor(location.main.temp * 9 / 5 + 32) }`}
                         <span className="text-[31px]">{`${degree === "celsius" ? "°C" : "°F"}`}</span>
                     </p>
                     <div className="absolute -left-[20px] bottom-[20px]">
                         <div className="relative">
-                            <p>TEMP: {`${degree === "celsius" ? Math.floor(location.main.temp) + "°C" : Math.floor(location.main.temp) * 9 / 5 + 32 + "°F"}`}</p>
-                            <p>FEELS: {`${degree === "celsius" ? Math.floor(location.main.feels_like) + "°C" : Math.floor(location.main.feels_like) * 9 / 5 + 32 + "°F"}`}</p>
+                            <p>TEMP: {`${degree === "celsius" ? Math.floor(location.main.temp) + "°C" : Math.floor(location.main.temp * 9 / 5 + 32).toFixed(0) + "°F"}`}</p>
+                            <p>FEELS: {`${degree === "celsius" ? Math.floor(location.main.feels_like) + "°C" : Math.floor(location.main.feels_like * 9 / 5 + 32).toFixed(0) + "°F"}`}</p>
                             <div className="bg-white w-[10px] h-[1px] absolute -top-[5px] -rotate-45 -right-[10px]"/>
                         </div>
                         
