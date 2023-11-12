@@ -17,7 +17,7 @@ function Form() {
   };
 
   return (
-    <form action="" className="">
+    <form action="" className="mt-[24px]">
       <div className="relative bg-green flex justify-between items-center px-[6px] py-[1px]">
         <img src={search} alt="" className={`${onFocus ? "hidden" : "block"}`} />
         <input

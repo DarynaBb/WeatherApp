@@ -31,7 +31,7 @@ function Menu() {
                 <img src={menu} alt="" />
             </button>
         </div>    
-        <div className={`${isMenuOpen ? "block" : "hidden" } absolute top-[80px] right-[30px] bg-white p-[40px] rounded-[8px]`}>
+        <div className={`${isMenuOpen ? "block" : "hidden" } absolute z-300 top-[80px] right-[30px] bg-white p-[40px] rounded-[8px]`}>
             <ul>
                 <li onClick={onCklickHandlerEdit} className='hover:underline cursor-pointer'>Edit your list</li>
                 <li className='hover:underline flex items-center'
@@ -44,8 +44,7 @@ function Menu() {
                 >
                     <p>Fahrenheit</p>
                     <p className={`${degree === "fahrenheit" ? "block" : "hidden"} hover:underline`}> *</p>
-                </li>
-                    
+                </li>    
             </ul>
         </div>
     </div>    

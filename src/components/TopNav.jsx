@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 function TopNav({text, to}) {
   return (
-    <div className="flexBetween mb-[10px]">
+    <div className="flexBetween w-full">
         <Link to={to}>
         <img src={line} className="w-[10px] h-[20px]" alt="back" />
         </Link>
