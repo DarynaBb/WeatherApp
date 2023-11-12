@@ -53,7 +53,7 @@ function MainCityData() {
      <>
      <TopNav text={`${location ? location.name : ""}`} to="/dashboard"/>
          {location ? (
-            <div className="flex flex-col items-center w-full">
+            <div className="flex flex-col items-center w-full mt-[50px]">
             <div className="text-[12px] relative flex flex-col items-center w-[350px]">
                 <div className="relative"> 
                     <img src={randomPic()} alt="icon" width={200} height={200} />

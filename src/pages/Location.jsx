@@ -63,7 +63,7 @@ function Location() {
             dynamicBullets: true,
           }}
           modules={[Pagination]}
-          className="mySwiper w-full mt-[50px]"
+          className="mySwiper w-full"
         >
           <SwiperSlide>
             <MainCityData />
