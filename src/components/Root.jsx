@@ -3,7 +3,7 @@ import { Outlet } from 'react-router-dom'
 
 function Root() {
   return (
-    <div className='bg-black text-white'>
+    <div className='bg-black h-screen overflow-scroll text-white'>
         <Outlet />
     </div>
   )
