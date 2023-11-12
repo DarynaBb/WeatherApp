@@ -2,10 +2,10 @@ import React from 'react'
 import { useParams } from "react-router-dom";
 import { WeatherContext } from "../context/WeatherContext";
 import { useContext, useState, useEffect } from "react";
-import { weatherImages } from "../constants";
 import { MenuContext } from "../context/MenuContext";
 import { NotFoundPage } from '../pages/NotFoundPage';
 import TopNav from "../components/TopNav";
+import { weatherVisualization } from '../constants';
 
 
 function MainCityData() {
@@ -56,7 +56,7 @@ function MainCityData() {
             <div className="flex flex-col items-center w-full mt-[50px]">
             <div className="text-[12px] relative flex flex-col items-center w-[350px]">
                 <div className="relative"> 
-                    <img src={randomPic()} alt="icon" width={200} height={200} />
+                    <img src={weatherVisualization.get(location.weather[0].main).iconLocation} alt="icon" width={200} height={200} />
                     <p className="text-[130px]">{`${degree === "celsius" ? Math.floor(location.main.temp) : Math.floor(location.main.temp) * 9 / 5 + 32 }`}
                         <span className="text-[31px]">{`${degree === "celsius" ? "°C" : "°F"}`}</span>
                     </p>
@@ -86,8 +86,8 @@ function MainCityData() {
                 </div>           
                 </div>
                 <div className="mt-[50px]">
-                    <p className="text-[24px]">{location.weather[0].description}</p>
-                    <p className="font-sans text-[14px] max-w-[218px]">Embrace the whimsy! Pretend the clouds are your canvas and the sky is your masterpiece. Challenge yourself to find shapes and animals in the clouds, and declare yourself the official cloud sculptor of the day.</p>
+                    <p className="text-[24px]">{weatherVisualization.get(location.weather[0].main).titleText}</p>
+<p className="font-sans text-[14px] max-w-[218px]">{weatherVisualization.get(location.weather[0].main).descriptionText}</p>
                 </div>       
             </div>
                 ) : (

@@ -7,9 +7,9 @@ import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
 import Button from "../components/Button";
 import TopNav from "../components/TopNav";
-import { weatherImages } from "../constants";
 import { MenuContext } from "../context/MenuContext";
 import MainCityData from "../components/MainCityData";
+import { weatherVisualization } from '../constants';
 
 function Location() {
   const { city } = useParams();
@@ -18,25 +18,6 @@ function Location() {
 
   const [location, setLocation] = useState(null);
 
-  const randomPic = () => {
-    const randomWeather = Math.floor(Math.random() * weatherImages.length);
-
-    let randomState;
-    if (randomWeather === 0) {
-      randomState = "snowy";
-    } else if (randomWeather === 1) {
-      randomState = "rainy";
-    } else {
-      randomState = "sunny";
-    }
-    const randomIcon = Math.floor(
-      Math.random() * weatherImages[randomWeather][randomState].length
-    );
-    const randomImage = weatherImages[randomWeather][randomState].map(
-      (image) => image
-    );
-    return randomImage[randomIcon];
-  };
 
   useEffect(() => {
     const getCityByName = (cityParam) => {
@@ -80,7 +61,7 @@ function Location() {
                   <div className="text-[12px] relative flex flex-col items-center w-[350px]">
                     <div className="relative">
                       <img
-                        src={randomPic()}
+                        src={weatherVisualization.get(location.weather[0].main).iconLocation} 
                         alt="icon"
                         width={200}
                         height={200}
@@ -139,13 +120,10 @@ function Location() {
                   </div>
                   <div className="mt-[50px]">
                     <p className="text-[24px]">
-                      {location.weather[0].description}
+                    {weatherVisualization.get(location.weather[0].main).titleText}
                     </p>
                     <p className="font-sans text-[14px] max-w-[218px]">
-                      Embrace the whimsy! Pretend the clouds are your canvas and
-                      the sky is your masterpiece. Challenge yourself to find
-                      shapes and animals in the clouds, and declare yourself the
-                      official cloud sculptor of the day.
+                      {weatherVisualization.get(location.weather[0].main).descriptionText}
                     </p>
                   </div>
                 </div>

@@ -6,7 +6,7 @@ import CityNav from "../components/CityNav";
 import MostCommonCities from "../components/MostCommonCities";
 import TopNav from "../components/TopNav";
 import { MenuContext } from "../context/MenuContext";
-import { weatherImages } from "../constants";
+
 
 
 function Dashboard() {
