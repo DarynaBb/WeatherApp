@@ -6,6 +6,8 @@ import CityNav from "../components/CityNav";
 import MostCommonCities from "../components/MostCommonCities";
 import TopNav from "../components/TopNav";
 import { MenuContext } from "../context/MenuContext";
+import { weatherImages } from "../constants";
+
 
 function Dashboard() {
   const { userCities } = useContext(WeatherContext);
@@ -21,9 +23,9 @@ function Dashboard() {
 
   console.log(userCities);
   return (
-    <section className="text-white ">
+    <section className="text-white">
       <div className="max-container padding-container">
-        <TopNav text="LOCATION" />
+        <TopNav text="LOCATION" to="/" />
         <Form />
         <MostCommonCities />
         <FoundedCityData />

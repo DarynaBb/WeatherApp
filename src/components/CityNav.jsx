@@ -25,7 +25,6 @@ function CityNav() {
               <button className={`w-[20px] h-[1px] bg-black ml-[6px] mr-[10px]`} ></button>
             </div>
           <div className={`w-full flex flex-col items-center bg-${index} text-black `}  key={city.id}>
-            {/* <button className={`${edit ? "block " : "hidden"} w-[20px] h-[1px] bg-black relative z-100`} onClick={() => removeCity(city.id)}></button> */}
             <Link to={`/${city.name}`} 
               className='block w-full p-[7px]'
             >

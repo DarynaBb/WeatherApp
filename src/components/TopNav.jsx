@@ -2,10 +2,10 @@ import Menu from "./Menu";
 import line from "../assets/images/Line.svg";
 import { Link } from "react-router-dom";
 
-function TopNav({text}) {
+function TopNav({text, to}) {
   return (
     <div className="flexBetween mb-[10px]">
-        <Link to="/">
+        <Link to={to}>
         <img src={line} className="w-[10px] h-[20px]" alt="back" />
         </Link>
         <p className="text-[12px]">{text}</p>
