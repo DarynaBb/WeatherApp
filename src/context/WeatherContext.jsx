@@ -7,10 +7,11 @@ const WeatherContextProvider = ({ children }) => {
   const [cityName, setCityName] = useState("");
   const [userCities, setUserCities] = useState(JSON.parse(localStorage.getItem("citiesArray")) || []);
   const [isCityAdded, setIsCityAdded] = useState(false);
+  
 
-  const APIkey = "11a9f7f715a24513ea614a13dabe421f";
+  const APIkey = "";
 
-  const url = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=Metric&appid=${APIkey}`;
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=Metric&appid=11a9f7f715a24513ea614a13dabe421f`;
 
   const goBack = () => {
     window.history.back();
@@ -41,7 +42,8 @@ const WeatherContextProvider = ({ children }) => {
         setCityName,
         userCities,
         setUserCities,
-        goBack
+        goBack, 
+        isCityAdded, setIsCityAdded
       }}
     >
       {children}

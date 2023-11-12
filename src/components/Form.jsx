@@ -4,16 +4,16 @@ import search from "../assets/images/Search.svg"
 import { FormContext } from "../context/FormContext";
 
 function Form() {
-  const { cityName, setCityName, fetchData, setisCityAdded } = useContext(WeatherContext);
-  const {onFocus, setOnFocus, isCityFound, setIsCityFound} = useContext(FormContext);
+  const { cityName, setCityName, fetchData, setIsCityAdded,  weatherData,  userCities } = useContext(WeatherContext);
+  const {onFocus, setOnFocus, isCityFound, setIsCityFound, setCityAlreadyExists, cityAlreadyExists} = useContext(FormContext);
   
 
-  const onClickhandlerSearch = (event) => {
+  const onClickhandlerSearch = async (event) => {
     event.preventDefault();
-    fetchData();
+    await fetchData();
     setCityName("");
     setIsCityFound(true);
-    setisCityAdded(false);
+    setIsCityAdded(false);
   };
 
   return (
