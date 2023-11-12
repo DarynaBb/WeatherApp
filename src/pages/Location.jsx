@@ -69,7 +69,7 @@ function Location() {
                 
                     {location ? (
                         <div className="flex flex-col items-center w-full h-screen">
-                        <div className="text-[12px] relative flex flex-col items-center w-full">
+                        <div className="text-[12px] relative flex flex-col items-center w-[350px]">
                             <div className="relative"> 
                                 <img src={randomPic()} alt="icon" width={200} height={200} />
                                 <p className="text-[130px]">{`${degree === "celsius" ? Math.floor(location.main.temp) : Math.floor(location.main.temp) * 9 / 5 + 32 }`}
@@ -92,7 +92,7 @@ function Location() {
                                 </div>
                             </div>
                             <div className="absolute left-0 top-[40px]">
-                                <div className="relative">
+                                <div className="relative text-left">
                                     <p>WIND: {location.wind.speed} M/S</p>
                                     <p>CLOUDS: {location.clouds.all} %</p>
                                     <div className="bg-white w-[10px] h-[1px] absolute -bottom-[5px] rotate-45 -right-[10px]"/>
