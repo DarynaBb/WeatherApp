@@ -32,7 +32,7 @@ function Location() {
 
 
     return (
-        <>
+        <section>
             <Swiper
                 pagination={{
                 dynamicBullets: true,
@@ -68,7 +68,7 @@ function Location() {
                 </SwiperSlide>
                 ))}
             </Swiper>
-        </>
+        </section>
   )
 
   

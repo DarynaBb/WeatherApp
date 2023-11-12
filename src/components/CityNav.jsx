@@ -20,14 +20,20 @@ function CityNav() {
   return (
     <ul className={`${onFocus ? "opacity-40" : "opacity-100"} flex flex-col items-center gap-[10px] mt-[40px]`}>
         {userCities.map((city, index) => (
-          <div className={`${edit ? "flex flex-row items-center gap-[20px]" : "w-full flex flex-col items-center"} bg-${index} text-black `}  key={city.id}>
+          <div className={`flex w-full items-center bg-${index}`}>
+            <button className={`${edit ? "block " : "hidden"} w-[20px] h-[1px] bg-black ml-[6px] mr-[10px]`} onClick={() => removeCity(city.id)}></button>
+          <div className={`w-full flex flex-col items-center bg-${index} text-black `}  key={city.id}>
+            {/* <button className={`${edit ? "block " : "hidden"} w-[20px] h-[1px] bg-black relative z-100`} onClick={() => removeCity(city.id)}></button> */}
             <Link to={`/${city.name}`} 
               className='block w-full p-[7px]'
             >
               <div className='flexBetween' >
-                <div>
-                  <p className='text-[24px]'>{city.name}</p>
-                  <p className='text-[14px]'>{city.weather[0].description}</p>
+                <div className={`${edit ? "flex items-center gap-[10px]" : ""}`}>
+                  
+                  <div>
+                    <p className='text-[24px]'>{city.name}</p>
+                    <p className='text-[14px]'>{city.weather[0].description}</p>
+                  </div>
                 </div>
                 <div className='text-right'>
                   <p className='text-[24px]'>{`${degree === "celsius" ? Math.floor(city.main.temp) + "°C" : Math.floor(city.main.temp) * 9 / 5 + 32 + "°F"}`}</p>
@@ -35,9 +41,10 @@ function CityNav() {
                 </div>
               </div>
             </Link>
-            <div className={`${edit ? "block" : "hidden"} border-[2px] w-[30%] p-[5px] rounded-[8px]`}>
-              <Button text="Remove" onClick={() => removeCity(city.id)} />
-            </div>
+            {/* <div className={`${edit ? "block" : "hidden"} border-[2px] w-[30%] p-[5px] rounded-[8px]`}>
+              <Button text="Remove"  />
+            </div> */}
+          </div>
           </div>
         ))}
       </ul>

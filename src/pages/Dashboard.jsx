@@ -11,7 +11,9 @@ function Dashboard() {
   const { userCities } = useContext(WeatherContext);
   const { theme } = useContext(MenuContext);
 
-  document.body.style.backgroundColor = theme;
+  
+  // document.body.style.color = theme;
+  
   
   useEffect(() => {
     localStorage.setItem("citiesArray", JSON.stringify(userCities));
@@ -19,7 +21,7 @@ function Dashboard() {
 
   console.log(userCities);
   return (
-    <section className=" bg-black text-white ">
+    <section className="text-white ">
       <div className="max-container padding-container">
         <TopNav text="LOCATION" />
         <Form />
