@@ -68,7 +68,7 @@ function Location() {
                 <SwiperSlide>
                 
                     {location ? (
-                        <div className="flex flex-col items-center w-full h-screen">
+                        <div className="flex flex-col items-center w-full">
                         <div className="text-[12px] relative flex flex-col items-center w-[350px]">
                             <div className="relative"> 
                                 <img src={randomPic()} alt="icon" width={200} height={200} />
@@ -101,7 +101,7 @@ function Location() {
                             </div>
                             
                             </div>
-                            <div>
+                            <div className="mt-[50px]">
                                 <p className="text-[24px]">{location.weather[0].description}</p>
                                 <p className="font-sans text-[14px] max-w-[218px]">Embrace the whimsy! Pretend the clouds are your canvas and the sky is your masterpiece. Challenge yourself to find shapes and animals in the clouds, and declare yourself the official cloud sculptor of the day.</p>
                             </div>

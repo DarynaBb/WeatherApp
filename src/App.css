@@ -94,4 +94,25 @@ body {
   background-color: #DFD0FF;
 }
 
+.swiper-pagination-bullet {
+  background-color:  #DFD0FF;
+} 
 
+
+.swiper-pagination-bullet-active {
+background-color: #9B71F4;
+}
+
+/* .swiper-pagination-bullet-active-next {
+  background-color:  #DFD0FF;
+} */
+
+.swiper-pagination-bullet-active-next {
+  background-color: #9B71F4;
+  opacity: 0.8;
+}
+
+.swiper-pagination-bullet-active-next-next {
+  background-color: #9B71F4;
+  opacity: 0.6;
+}
