@@ -68,8 +68,8 @@ function Location() {
                 <SwiperSlide>
                 
                     {location ? (
-                        <div className="flex flex-col items-center w-full">
-                        <div className="text-[12px] relative flex flex-col items-center w-[320px]">
+                        <div className="flex flex-col items-center w-full h-screen">
+                        <div className="text-[12px] relative flex flex-col items-center w-[350px]">
                             <div className="relative"> 
                                 <img src={randomPic()} alt="icon" width={200} height={200} />
                                 <p className="text-[130px]">{`${degree === "celsius" ? Math.floor(location.main.temp) : Math.floor(location.main.temp) * 9 / 5 + 32 }`}
