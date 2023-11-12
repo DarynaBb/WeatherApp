@@ -60,7 +60,7 @@ function MainCityData() {
                     <p className="text-[130px]">{`${degree === "celsius" ? Math.floor(location.main.temp) : Math.floor(location.main.temp) * 9 / 5 + 32 }`}
                         <span className="text-[31px]">{`${degree === "celsius" ? "°C" : "°F"}`}</span>
                     </p>
-                    <div className="absolute left-0 bottom-[20px]">
+                    <div className="absolute -left-[20px] bottom-[20px]">
                         <div className="relative">
                             <p>TEMP: {`${degree === "celsius" ? Math.floor(location.main.temp) + "°C" : Math.floor(location.main.temp) * 9 / 5 + 32 + "°F"}`}</p>
                             <p>FEELS: {`${degree === "celsius" ? Math.floor(location.main.feels_like) + "°C" : Math.floor(location.main.feels_like) * 9 / 5 + 32 + "°F"}`}</p>
@@ -87,7 +87,7 @@ function MainCityData() {
                 </div>
                 <div className="mt-[50px]">
                     <p className="text-[24px]">{weatherVisualization.get(location.weather[0].main).titleText}</p>
-<p className="font-sans text-[14px] max-w-[218px]">{weatherVisualization.get(location.weather[0].main).descriptionText}</p>
+                    <p className="font-sans text-[14px] max-w-[218px]">{weatherVisualization.get(location.weather[0].main).descriptionText}</p>
                 </div>       
             </div>
                 ) : (
