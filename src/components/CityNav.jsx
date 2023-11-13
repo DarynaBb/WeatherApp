@@ -20,7 +20,7 @@ function CityNav() {
   return (
     <ul className={`${onFocus ? "opacity-40" : "opacity-100"} flex flex-col items-center gap-[10px] mt-[40px]`}>
         {userCities.map((city, index) => (
-          <div className={`flex w-full items-center bg-${index}`}>
+          <div className={`flex w-full items-center bg-${index}`} key={index}>
             <div className={`${edit ? "block " : "hidden"} w-[32px] cursor-pointer`} onClick={() => removeCity(city.id)}>
               <button className={`w-[20px] h-[1px] bg-black ml-[6px] mr-[10px]`} ></button>
             </div>

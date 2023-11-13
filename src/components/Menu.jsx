@@ -2,7 +2,7 @@ import React from 'react'
 import { useState, useContext } from 'react'
 import { MenuContext } from '../context/MenuContext';
 import menu from "../assets/images/Menu.svg";
-import test from "../assets/images/Test.svg";
+import pencil from "../assets/images/Pencil.svg";
 import check from "../assets/images/Check.svg";
 import Slider from './Slider';
 import { useLocation } from 'react-router-dom';
@@ -55,7 +55,7 @@ function Menu() {
             <ul>
                 <li onClick={() => setEdit(true)} className={`${currentPath === "/dashboard" ? "hover:underline cursor-pointer flex justify-between border-b border-black":"hidden"}`}>
                     <p>Edit my rainbow</p> 
-                    <img src={test} alt="" /> </li>
+                    <img src={pencil} alt="" /> </li>
                 <li className={`${degree === "celsius" ? "text-menu-gray border-menu-gray" : "text-black border-black" } flex justify-between border-b  relative`}
                     onClick={onCklickHandlerCelcius}
                 >
