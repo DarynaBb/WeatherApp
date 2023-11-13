@@ -2,6 +2,7 @@ import React from 'react'
 import { useState, useContext } from 'react'
 import { MenuContext } from '../context/MenuContext';
 import menu from "../assets/images/Menu.svg";
+import Slider from './Slider';
 
 function Menu() {
    const { degree, setDegree, setEdit, edit } = useContext(MenuContext);
@@ -44,7 +45,8 @@ function Menu() {
                 >
                     <p>Fahrenheit</p>
                     <p className={`${degree === "fahrenheit" ? "block" : "hidden"} hover:underline`}> *</p>
-                </li>    
+                </li>  
+                <Slider />  
             </ul>
         </div>
     </div>    

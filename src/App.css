@@ -113,3 +113,9 @@ background-color: #9B71F4;
   background-color: #9B71F4;
   opacity: 0.6;
 }
+
+.vertical-slider {
+  height: 380px;
+  width: 25%;
+  background-color: #464646;
+}

@@ -91,7 +91,6 @@ function MainCityData() {
                 </div>       
             </div>
                 ) : (
-            
             <NotFoundPage/>
         )}
 </>
