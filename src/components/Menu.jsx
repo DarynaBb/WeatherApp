@@ -2,6 +2,11 @@ import React from 'react'
 import { useState, useContext } from 'react'
 import { MenuContext } from '../context/MenuContext';
 import menu from "../assets/images/Menu.svg";
+import test from "../assets/images/Test.svg";
+import check from "../assets/images/Check.svg";
+import Slider from './Slider';
+
+
 
 function Menu() {
    const { degree, setDegree, setEdit, edit } = useContext(MenuContext);
@@ -49,9 +54,24 @@ function Menu() {
                     <li className={`${degree === "fahrenheit" ? "text-menu-gray border-menu-gray" : "text-black border-black" } flex justify-between border-b  relative`}
                     onClick={onCklickHandlerCelciusFahrenheit}
                 >
-                    <p>Fahrenheit</p>
-                    <p className={`${degree === "fahrenheit" ? "block" : "hidden"} hover:underline`}> *</p>
-                </li>    
+               
+                 <img src={check} width={12} height={12} className={`${degree === "fahrenheit" ? "opacity-100" : "opacity-0"} absolute -left-[12px] top-[50%] -translate-y-[50%] `}/> 
+                    <p className={`${degree === "fahrenheit" ? "menu-gray":"text-black"}`}>Fahrenheit</p>
+                    <p className={`${degree === "fahrenheit" ? "menu-gray": "text-text-gray"}`} >°F</p>
+                  
+                    
+                </li>
+                <li className='flex justify-between mb-[10px]'>
+                    <p>Light</p>
+                    <p>Dark</p>
+                </li>
+                <Slider />
+             
+              
+        <div className='flex justify-center mt-[25px]'>
+            <button onClick={() => setIsMenuOpen(false)} >Close</button>
+        </div>
+
             </ul>
         </div>
         </div>
