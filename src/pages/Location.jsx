@@ -54,7 +54,7 @@ function Location() {
                         {`${degree === "celsius" ? Math.floor(location.main.temp) : (Math.floor(location.main.temp * 9 / 5 + 32))}`}
                         <span className="text-[31px]">{`${degree === "celsius" ? "°C" : "°F"}`}</span>
                       </p>
-                      <div className="absolute left-0 bottom-[20px]">
+                      <div className="absolute -left-[20px] bottom-[20px]">
                         <div className="relative">
                           <p>TEMP: {`${degree === "celsius" ? Math.floor(location.main.temp) + "°C" 
                             : 
