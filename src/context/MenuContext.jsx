@@ -7,7 +7,7 @@ const MenuContextProvider = ({ children }) => {
     const [degree, setDegree] = useState("celsius");
     const [theme, setTheme] = useState("black");
     const [isDarkMode, setIsDarkMode] = useState(true);
-    const [value, setValue] = useState(50);
+    const [value, setValue] = useState(60);
 
     return (
         <MenuContext.Provider value={ {edit, setEdit, degree, setDegree, theme, setTheme,isDarkMode,setIsDarkMode, value,setValue} }>

@@ -5,13 +5,16 @@ import menu from "../assets/images/Menu.svg";
 import test from "../assets/images/Test.svg";
 import check from "../assets/images/Check.svg";
 import Slider from './Slider';
+import { useLocation } from 'react-router-dom';
+
 
 
 
 function Menu() {
    const { degree, setDegree, setEdit, edit } = useContext(MenuContext);
    const [isMenuOpen, setIsMenuOpen] = useState(false); 
-
+   const location = useLocation();
+   const currentPath = location.pathname;
    const onCklickHandler = () => {
     isMenuOpen ? setIsMenuOpen(false) : setIsMenuOpen(true);
    }
@@ -27,20 +30,26 @@ function Menu() {
    const onCklickHandlerEdit = () => {
     edit ? setEdit(false) : setEdit(true);
    }
+   const test = () => {
+    setEdit(false);
+    setIsMenuOpen(false);
+   }
 
 
   return (
 
     <div className='text-black'>
         <div className='relative '> 
-        <div className='flex justify-end '>
-            <button onClick={() => setIsMenuOpen(true)}>
+        <div className="flex justify-end" >
+            <button className={`${edit ? "hidden" : "block"}`} onClick={() => setIsMenuOpen(true)}>
+
                 <img src={menu} alt="" />
             </button>
+            <p  className={`${edit ? "block" : "hidden" } text-[12px] text-white cursor-pointer`} onClick={() => test()}>Done</p>
         </div>    
-        <div className={`${isMenuOpen ? "block" : "hidden" } absolute min-w-[200px] z-20 top-[25px] right-[0px] bg-green py-[12px] pl-[26px] pr-[12px] rounded-[8px]`}>
+        <div className={`${isMenuOpen  && !edit ? "block" : "hidden" } absolute min-w-[200px] z-20 top-[25px] right-[0px] bg-green py-[12px] pl-[26px] pr-[12px] rounded-[8px]`}>
             <ul>
-                <li onClick={onCklickHandlerEdit} className=' hover:underline cursor-pointer flex justify-between border-b border-black'>
+                <li onClick={() => setEdit(true)} className={`${currentPath === "/dashboard" ? "hover:underline cursor-pointer flex justify-between border-b border-black":"hidden"}`}>
                     <p>Edit my rainbow</p> 
                     <img src={test} alt="" /> </li>
                 <li className={`${degree === "celsius" ? "text-menu-gray border-menu-gray" : "text-black border-black" } flex justify-between border-b  relative`}
@@ -61,11 +70,14 @@ function Menu() {
                   
                     
                 </li>
-                <li className='flex justify-between mb-[10px]'>
+                <li className= {`${currentPath === "/dashboard" ?  "flex justify-between mb-[10px]" : "hidden"}`}>
                     <p>Light</p>
                     <p>Dark</p>
                 </li>
-                <Slider />
+
+               <div className={`${currentPath === "/dashboard" ? "block" : "hidden"}`} >
+               <Slider />
+               </div>
              
               
         <div className='flex justify-center mt-[25px]'>

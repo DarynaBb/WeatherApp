@@ -9,7 +9,7 @@ function Home() {
                 <img src={image} alt="weather emojis" />
             </div>
             <div className="mt-[40px] mb-[24px] text-center">
-                <h1 className="text-white text-[80px] leading-[80%]">
+                <h1 className=" text-[80px] leading-[80%]">
                     SHOW ME<br />
                     THE<br /> 
                     WEATHER
