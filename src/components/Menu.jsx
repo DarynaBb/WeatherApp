@@ -38,9 +38,9 @@ function Menu() {
                 <img src={menu} alt="" />
             </button>
         </div>    
-        <div className={`${isMenuOpen ? "block" : "hidden" } absolute z-20 top-[25px] right-[0px] bg-green py-[12px] pl-[26px] pr-[12px] rounded-[8px]`}>
+        <div className={`${isMenuOpen ? "block" : "hidden" } absolute min-w-[200px] z-20 top-[25px] right-[0px] bg-green py-[12px] pl-[26px] pr-[12px] rounded-[8px]`}>
             <ul>
-                <li onClick={onCklickHandlerEdit} className='hover:underline cursor-pointer flex justify-between border-b border-black'>
+                <li onClick={onCklickHandlerEdit} className=' hover:underline cursor-pointer flex justify-between border-b border-black'>
                     <p>Edit my rainbow</p> 
                     <img src={test} alt="" /> </li>
                 <li className={`${degree === "celsius" ? "text-menu-gray border-menu-gray" : "text-black border-black" } flex justify-between border-b  relative`}

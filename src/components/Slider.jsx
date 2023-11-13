@@ -1,21 +1,33 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import ReactSlider from "react-slider";
+import { MenuContext } from "../context/MenuContext";
 
 
 function Slider() {
+ const{setIsDarkMode, isDarkMode, value, setValue} = useContext(MenuContext);
+ 
+  const toggleDarkamode = () =>{
+    setIsDarkMode(!isDarkMode);
+  }
   return (
     <ReactSlider
-      className="vertical-slider"
-      markClassName="example-mark"
+      className="horizontal-slider"
+      thumbClassName="customSlider-thumb"
+      // markClassName="example-mark"
       
-      trackClassName="example-track"
-      defaultValue={0}
+      trackClassName="customSlider-track"
+
+      // defaultValue={0}
       
-      min={0}
-      max={4}
+       min={0}
+       max={100}
+       
+       value={value }
+       onChange={(newValue) => setValue(newValue)}
+
      
         
-      orientation="vertical"
+      // orientation="horizontal"
     />
   )
 }

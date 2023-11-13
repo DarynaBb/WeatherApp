@@ -23,7 +23,7 @@ function Dashboard() {
 
   console.log(userCities);
   return (
-    <section className="text-white">
+    <section>
       <div className="max-container padding-container">
         <TopNav text="LOCATION" to="/" />
         <Form />
