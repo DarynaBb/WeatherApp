@@ -7,15 +7,9 @@ import MostCommonCities from "../components/MostCommonCities";
 import TopNav from "../components/TopNav";
 import { MenuContext } from "../context/MenuContext";
 
-
-
 function Dashboard() {
   const { userCities } = useContext(WeatherContext);
   const { theme } = useContext(MenuContext);
-
-  
-  // document.body.style.color = theme;
-  
   
   useEffect(() => {
     localStorage.setItem("citiesArray", JSON.stringify(userCities));

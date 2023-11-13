@@ -4,17 +4,17 @@ import { MenuContext } from "../context/MenuContext";
 
 
 function Slider() {
- const{setIsDarkMode, isDarkMode, value, setValue} = useContext(MenuContext);
+ const { value, setValue } = useContext(MenuContext);
  
   return (
     <ReactSlider
-      className="horizontal-slider"
-      thumbClassName="customSlider-thumb"
-      trackClassName="customSlider-track"
-       min={0}
-       max={100}
-       value={value }
-       onChange={(newValue) => setValue(newValue)}
+        className="horizontal-slider"
+        thumbClassName="customSlider-thumb"
+        trackClassName="customSlider-track"
+        min={0}
+        max={100}
+        value={value }
+        onChange={(newValue) => setValue(newValue)}
     />
   )
 }

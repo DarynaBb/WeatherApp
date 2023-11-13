@@ -55,7 +55,6 @@ body {
   font-size: 18px;
   width: 100%;
   margin-bottom: 50px;
-  /* Center slide text vertically */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -63,10 +62,6 @@ body {
   width: 750px;
 }
 
-.swiper-slide img {
-  /* display: block; */
-  
-}
 
 .bg-0 {
   background-color: #FFC6C6;
