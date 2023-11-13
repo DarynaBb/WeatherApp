@@ -11,6 +11,8 @@ import check from "../assets/images/Check.svg";
 
 
 
+
+
 function Menu() {
    const { degree, setDegree, setEdit, edit } = useContext(MenuContext);
    const [isMenuOpen, setIsMenuOpen] = useState(false); 
@@ -41,12 +43,12 @@ function Menu() {
                 <img src={menu} alt="" />
             </button>
         </div>    
-        <div className={`${isMenuOpen ? "block" : "hidden" } absolute z-300 top-[0px] right-[0px] bg-green py-[12px] pl-[26px] pr-[12px] rounded-[8px]`}>
+        <div className={`${isMenuOpen ? "block" : "hidden" } absolute z-20 top-[25px] right-[0px] bg-green py-[12px] pl-[26px] pr-[12px] rounded-[8px]`}>
             <ul>
                 <li onClick={onCklickHandlerEdit} className='hover:underline cursor-pointer flex justify-between border-b border-black'>
                     <p>Edit my rainbow</p> 
                     <img src={test} alt="" /> </li>
-                <li className={`${degree === "celsius" ? "text-menu-gray border-menu-gray" : "" } flex justify-between border-b border-black relative`}
+                <li className={`${degree === "celsius" ? "text-menu-gray border-menu-gray" : "text-black border-black" } flex justify-between border-b  relative`}
                     onClick={onCklickHandlerCelcius}
                 >
                     <img src={check} width={12} height={12} className={`${degree === "celsius" ? "opacity-100" : "opacity-0"} absolute -left-[12px] top-[50%] -translate-y-[50%] `}/> 
@@ -64,18 +66,12 @@ function Menu() {
                   
                     
                 </li>
-                <li className='flex justify-between'>
+                <li className='flex justify-between mb-[10px]'>
                     <p>Light</p>
                     <p>Dark</p>
                 </li>
-                <input
-        type="range"
-        min="0"
-        max="100"
-        step="1"
-        // value={brightness}
-        // onChange={(e) => setBrightness(Number(e.target.value))}
-      />
+             
+              
         <div className='flex justify-center mt-[25px]'>
             <button onClick={() => setIsMenuOpen(false)} >Close</button>
         </div>
