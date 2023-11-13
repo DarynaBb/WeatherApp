@@ -54,7 +54,7 @@ function MainCityData() {
      <TopNav text={`${location ? location.name : ""}`} to="/dashboard"/>
          {location ? (
             <div className="flex flex-col items-center w-full mt-[50px]">
-            <div className="text-[12px] relative flex flex-col items-center w-[350px]">
+            <div className="text-[12px] relative flex flex-col items-center xs:w-[350px] w-[320px]">
                 <div className="relative"> 
                     <img src={weatherVisualization.get(location.weather[0].main).iconLocation} alt="icon" width={200} height={200} />
                     <p className="text-[130px]">{`${degree === "celsius" ? Math.floor(location.main.temp) : Math.floor(location.main.temp * 9 / 5 + 32) }`}

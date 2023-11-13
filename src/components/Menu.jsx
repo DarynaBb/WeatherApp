@@ -6,12 +6,13 @@ import test from "../assets/images/Test.svg";
 import check from "../assets/images/Check.svg";
 import Slider from './Slider';
 import { useLocation } from 'react-router-dom';
+import mblack from "../assets/images/Menublack.svg";
 
 
 
 
 function Menu() {
-   const { degree, setDegree, setEdit, edit } = useContext(MenuContext);
+   const { degree, setDegree, setEdit, edit, value } = useContext(MenuContext);
    const [isMenuOpen, setIsMenuOpen] = useState(false); 
    const location = useLocation();
    const currentPath = location.pathname;
@@ -42,10 +43,13 @@ function Menu() {
         <div className='relative '> 
         <div className="flex justify-end" >
             <button className={`${edit ? "hidden" : "block"}`} onClick={() => setIsMenuOpen(true)}>
-
-                <img src={menu} alt="" />
+            <img className={`${value < 50 ? "block" : "hidden"}`} src={mblack} alt="" />
+                <img className={`${value > 50 ? "block" : "hidden"}`} src={menu} alt="" />
             </button>
-            <p  className={`${edit ? "block" : "hidden" } text-[12px] text-white cursor-pointer`} onClick={() => test()}>Done</p>
+            <p className={`${
+  edit ? (value > 50 ? "text-white" : "text-black") : "hidden"
+} text-[12px] cursor-pointer`} onClick={() => test()}>Done</p>
+
         </div>    
         <div className={`${isMenuOpen  && !edit ? "block" : "hidden" } absolute min-w-[200px] z-20 top-[25px] right-[0px] bg-green py-[12px] pl-[26px] pr-[12px] rounded-[8px]`}>
             <ul>

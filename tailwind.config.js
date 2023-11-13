@@ -10,8 +10,12 @@ export default {
           green: '#ECFF12',
           "text-gray": '#464646',
           "menu-gray": "#718BE60",
+
       }
     },
+    screens: {
+      xs: "480px",
+},
   plugins: [],
 }
 
