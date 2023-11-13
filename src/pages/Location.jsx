@@ -46,7 +46,7 @@ function Location() {
               <TopNav text={`${location ? location.name : ""}`} to="/dashboard" />
               {location ? (
                 <div className="flex flex-col items-center w-full mt-[50px]">
-                  <div className="text-[12px] relative flex flex-col items-center w-[350px]">
+                  <div className="text-[12px] relative flex flex-col items-center xs:w-[350px] w-[320px]">
                     <div className="relative">
                       <img src={weatherVisualization.get(location.weather[0].main).iconLocation} 
                         alt="icon" width={200} height={200} />
@@ -65,7 +65,7 @@ function Location() {
                                 : 
                                 (Math.floor(location.main.feels_like * 9 / 5 + 32)) + "°F"}`}
                           </p>
-                          <div className={`${value > 50 ? "bg-white" : "bg-black" } w-[10px] h-[1px] absolute -top-[5px] -rotate-45 -right-[10px]`} />
+                          <div className={`${value > 50 ? "bg-white" : "bg-black"} w-[10px] h-[1px] absolute -top-[5px] -rotate-45 -right-[10px]`} />
                         </div>
                       </div>
                     </div>
