@@ -37,7 +37,7 @@ const WeatherContextProvider = ({ children }) => {
 
   const fetchDataUpdate = async (city) => {
     try {
-      const response = await fetch(url2.replace('London', city));
+      const response = await fetch(url2.replace("London", city));
       if (response.ok) {
         const data = await response.json();
         setWeatherData(data);

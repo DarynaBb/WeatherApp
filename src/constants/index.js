@@ -1,5 +1,9 @@
+// export const commonCities = [
+//     "BANGKOK", "BERLIN", "LONDON", "NEW YORK", "PARIS"
+// ]
+
 export const commonCities = [
-    "BANGKOK", "BERLIN", "LONDON", "NEW YORK", "PARIS"
+    "LIMA", "VARNA", "TABRIZ", "TEHERAN", "KAMIANSKE", "SAN JOSE", "KRYWYJ RIH", "MAGDEBURG", "DAMASKUS", "STAMBUL"
 ]
 
 // export const weatherImages = [
