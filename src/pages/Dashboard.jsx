@@ -6,10 +6,11 @@ import CityNav from "../components/CityNav";
 import MostCommonCities from "../components/MostCommonCities";
 import TopNav from "../components/TopNav";
 import { MenuContext } from "../context/MenuContext";
+import { FormContext } from "../context/FormContext";
 
 function Dashboard() {
-  const { userCities, fetchData, cityName, setCityName, fetchDataUpdate } = useContext(WeatherContext);
-  
+  const { userCities, fetchData, cityName, setCityName, fetchDataUpdate} = useContext(WeatherContext);
+  const { setIsCityFound } = useContext(FormContext);
   useEffect(() => {
     localStorage.setItem("citiesArray", JSON.stringify(userCities));
   }, [userCities]);
@@ -17,13 +18,15 @@ function Dashboard() {
   useEffect(() => {
     if (userCities.length > 0) {
        userCities.forEach((city) => fetchDataUpdate(city.name));
-      const intervalId = setInterval(() => {
+
+        const intervalId = setInterval(() => {
         userCities.forEach((city) => fetchDataUpdate(city.name));
 
       }, 300000);
+      setCityName('');
       return () => clearInterval(intervalId);
     }
-  }, [userCities]);
+  }, []);
 
   
   return (

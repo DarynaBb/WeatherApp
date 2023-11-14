@@ -24,7 +24,7 @@ function FoundedCityData() {
 
   return (
     <div className={`${onFocus? "opacity-40" : "opacity-100"} mt-[40px]`}>
-        {weatherData.main?.temp ? (
+        {weatherData.main?.temp && isCityFound ? (
         <div className="flexCenter flex-col gap-[10px]">
           <p className="text-[24px]">{weatherData.name}</p>
           <p className="text-[24px]">{`${degree === "celsius" ? Math.floor(weatherData.main.temp) + "°C" : Math.floor(weatherData.main.temp) * 9 / 5 + 32 + "°F"}`}</p>
