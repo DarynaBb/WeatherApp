@@ -8,14 +8,24 @@ import TopNav from "../components/TopNav";
 import { MenuContext } from "../context/MenuContext";
 
 function Dashboard() {
-  const { userCities } = useContext(WeatherContext);
-  const { theme } = useContext(MenuContext);
+  const { userCities, fetchData, cityName, setCityName, fetchDataUpdate } = useContext(WeatherContext);
   
   useEffect(() => {
     localStorage.setItem("citiesArray", JSON.stringify(userCities));
   }, [userCities]);
 
-  console.log(userCities);
+  useEffect(() => {
+    if (userCities.length > 0) {
+       userCities.forEach((city) => fetchDataUpdate(city.name));
+      const intervalId = setInterval(() => {
+        userCities.forEach((city) => fetchDataUpdate(city.name));
+
+      }, 300000);
+      return () => clearInterval(intervalId);
+    }
+  }, [userCities]);
+
+  
   return (
     <section>
       <div className="max-container padding-container">

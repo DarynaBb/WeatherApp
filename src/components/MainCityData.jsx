@@ -25,6 +25,7 @@ function MainCityData() {
     setLocation(foundLocation);
   }, [userCities, city]); 
 
+  
   return (
      <>
      <TopNav text={`${location ? location.name : ""}`} to="/dashboard"/>
@@ -36,7 +37,8 @@ function MainCityData() {
                     <p className="text-[130px]">{`${degree === "celsius" ? Math.floor(location.main.temp) : Math.floor(location.main.temp * 9 / 5 + 32) }`}
                         <span className="text-[31px]">{`${degree === "celsius" ? "°C" : "°F"}`}</span>
                     </p>
-                    <div className="absolute -left-[20px] bottom-[20px]">
+                    <div className= "-left-[20px] absolute bottom-[20px]">
+                        {console.log((Math.floor(location.main.temp * 9 / 5 + 32)) > 20)}
                         <div className="relative">
                             <p>TEMP: {`${degree === "celsius" ? Math.floor(location.main.temp) + "°C" : Math.floor(location.main.temp * 9 / 5 + 32).toFixed(0) + "°F"}`}</p>
                             <p>FEELS: {`${degree === "celsius" ? Math.floor(location.main.feels_like) + "°C" : Math.floor(location.main.feels_like * 9 / 5 + 32).toFixed(0) + "°F"}`}</p>
