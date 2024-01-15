@@ -5,7 +5,7 @@ export const NotFoundPage = () => {
     return (
       <div className="not-found-page">
         <h1>Not Found Page</h1>
-        <button onClick={() => goBack()}>Go Back</button>
+        <button className="mt-[50px]" onClick={() => goBack()}>Back to main page</button>
       </div>
     );
   };
