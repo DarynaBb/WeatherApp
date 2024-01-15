@@ -5,7 +5,7 @@ import { FormContext } from "../context/FormContext";
 
 function Form() {
   const { cityName, setCityName, fetchData, setIsCityAdded,  weatherData,  userCities } = useContext(WeatherContext);
-  const {onFocus, setOnFocus, isCityFound, setIsCityFound, setCityAlreadyExists, cityAlreadyExists} = useContext(FormContext);
+  const {onFocus, setOnFocus, isCityFound, setIsCityFound, setCityAlreadyExists, cityAlreadyExists, isCityOpen, setIsCityOpen} = useContext(FormContext);
   
 
   const onClickhandlerSearch = async (event) => {
@@ -14,6 +14,7 @@ function Form() {
     setCityName("");
     setIsCityFound(true);
     setIsCityAdded(false);
+    setIsCityOpen(true);
   };
 
   return (
